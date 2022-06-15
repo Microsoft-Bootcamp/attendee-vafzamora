@@ -21,5 +21,6 @@
 		"ms-azure-devops.azure-pipelines",
 		"ms-azuretools.vscode-docker",
 		"ms-vscode.powershell"
-	]
+	],
+	"postCreateCommand": "docker pull ghcr.io/valet-customers/valet-cli:latest && chmod +x ./valet/valet-update && chmod +x ./valet/valet || echo 'Could not auto-build. Skipping.' "
 }
